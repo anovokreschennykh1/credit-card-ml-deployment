@@ -20,6 +20,7 @@
 ├── Dockerfile                  # сборка Docker-образа
 ├── requirements.txt            # зависимости проекта
 └── README.md                   # описание проекта и инструкция по запуску
+```
 
 ## Описание данных
 Датасет [Default of Credit Card Clients Dataset](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset)
