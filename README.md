@@ -12,8 +12,8 @@
 │   ├── __init__.py
 │   └── api.py                  # Flask API: эндпоинты /predict и /health
 ├── models/
-│   ├── _model_v1.pkl            # модель для контрольной группы A
-│   └── _model_v2.pkl            # модель для тестовой группы B
+│   ├── _model_v1.pkl            # модель для контрольной группы A: GradientBoostingClassifier
+│   └── _model_v2.pkl            # модель для тестовой группы B: LogisticRegression
 ├── notebooks/
 │   └── Model_selection.ipynb    # обучение, сравнение моделей и сохранение в pickle
 ├── screenshots/                # скриншоты тестовых запросов и ответов API
@@ -23,4 +23,4 @@
 ```
 
 ## Описание данных
-Датасет [Default of Credit Card Clients Dataset](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset)
+Датасет [Default of Credit Card Clients Dataset](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset) содержит информацию о клиентах кредитной карты на Тайване с таргетом default.payment.next.month (дефолт в следующем месяце). Включает демографические данные, историю платежей, суммы счетов.
