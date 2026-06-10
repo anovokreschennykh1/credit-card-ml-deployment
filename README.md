@@ -36,9 +36,11 @@ pip install -r requirements.txt
 4. Запустить скрипт с Flask сервисом
 python app/api.py
 5. В отдельном окне терминала для запущенного сервиса на хосте 5000 можно дать команды
+5.1) Проверить состояние сервиса
 ```text
-curl -X GET http://localhost:5000/health -- проверить состояние сервиса
+curl -X GET http://localhost:5000/health
 ```
+5.2) Дать предсказание дефолта по входным характеристикам
 ```text
 curl -X POST http://localhost:5000/predict \
 -H "Content-Type: application/json" \
