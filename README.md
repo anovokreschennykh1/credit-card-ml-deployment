@@ -6,18 +6,18 @@
 Разработать и внедрить в production-like-среду сервис машинного обучения для прогнозирования дефолта по кредитным картам, который охватывает полный цикл от сохранения модели до организации A/B-тестирования.
 
 ## Структура проекта
-|app\
-|--__init__.py
-|--api.py
-|models\
-|--_model_v1.pkl # модель в группе A
-|--_model_v2.pkl # модель в группе B
-|notebooks\
-|--Model_selection.ipynb # обучение и запись моделей в pickle
-|screenshots\ # папка с тестами: скринами примера запросов и ответов
-|Dockerfile # сборка докер образа
-|requirements.txt # файл с зависимостями
-|README.md
+├── app/
+│   ├── __init__.py
+│   └── api.py                  # Flask API: эндпоинты /predict и /health
+├── models/
+│   ├── _model_v1.pkl            # модель для контрольной группы A
+│   └── _model_v2.pkl            # модель для тестовой группы B
+├── notebooks/
+│   └── Model_selection.ipynb    # обучение, сравнение моделей и сохранение в pickle
+├── screenshots/                # скриншоты тестовых запросов и ответов API
+├── Dockerfile                  # сборка Docker-образа
+├── requirements.txt            # зависимости проекта
+└── README.md                   # описание проекта и инструкция по запуску
 
 ## Описание данных
-Датасет [](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset)
+Датасет [Default of Credit Card Clients Dataset](https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset)
