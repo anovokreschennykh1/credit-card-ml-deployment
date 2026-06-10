@@ -50,6 +50,7 @@ python app/api.py
 ```text
 curl -X GET http://localhost:5000/health
 ```
+![health](/screenshots/curl_health.png)
 5.2) Дать предсказание дефолта по входным характеристикам
 ```text
 curl -X POST http://localhost:5000/predict \
@@ -84,12 +85,14 @@ curl -X POST http://localhost:5000/predict \
   ]
 }'
 ```
+![predict](/screenshots/curl_health.png)
 ### Запуск в Docker
 1. Собрать образ
 docker build -t app-ab .
 2. Запустить контейнер
 docker run -p 5000:5000 app-ab
 3. Далее можно обращаться к API по адресу http://localhost:5000 см пункты 5.1/5.2 для Локального запуска
+![docker_status](/screenshots/docker_status_app.png)
 
  ### Запуск готового образа из DockerHub
  Ссылка на образ: https://hub.docker.com/r/sasha4domaa/app-ab
@@ -119,7 +122,6 @@ docker run -p 5000:5000 app-ab
 - На вход принимаются пользовательские данные (из инпута в терминале или из JSON-запроса) для инференса
 - Модель отдаем в формате JSON: метку предсказния дефолта (0 или 1), вероятность дефолта которую предсказала модель
 - В логах сохраяется пользовательского запроса
-![](path/to/image.png)
 
 В production-среде такие логи могут собираться централизованно с помощью ELK-стека, Grafana Loki или аналогичных инструментов. Это позволяет отслеживать стабильность API, количество ошибок, распределение предсказаний и возможный drift данных
 
