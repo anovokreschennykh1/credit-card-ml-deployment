@@ -84,7 +84,9 @@ docker run -p 5000:5000 app-ab
 
  ### Запуск готового образа из DockerHub
  Ссылка на образ: https://hub.docker.com/r/sasha4domaa/app-ab
+ 
  docker pull sasha4domaa/app-ab
+ 
  docker run -p 5000:5000
  
 
