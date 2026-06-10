@@ -87,7 +87,7 @@ docker run -p 5000:5000 app-ab
  
  docker pull sasha4domaa/app-ab
  
- docker run -p 5000:5000
+ docker run -p 5000:5000 sasha4domaa/app-ab
  
 
  
