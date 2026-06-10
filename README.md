@@ -75,3 +75,19 @@ curl -X POST http://localhost:5000/predict \
   ]
 }'
 ```
+### Запуск в Docker
+1. Собрать образ
+docker build -t app-ab .
+2. Запустить контейнер
+docker run -p 5000:5000 app-ab
+3. Далее можно обращаться к API по адресу http://localhost:5000 см пункты 5.1/5.2 для Локального запуска
+
+ ### Запуск готового образа из DockerHub
+ Ссылка на образ: https://hub.docker.com/r/sasha4domaa/app-ab
+ docker pull sasha4domaa/app-ab
+ docker run -p 5000:5000
+ 
+
+ 
+ 
+
